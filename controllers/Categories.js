@@ -1,11 +1,12 @@
 const axios = require("axios");
+//! Multi get request
 module.exports.multigetCategories = async (req, res) => {
   const responseData = await axios(
     "https://api.trendyol.com/sapigw/product-categories"
   );
   res.json(responseData.data);
 };
-
+//! Single get request
 module.exports.singlegetCategories = async (req, res) => {
   const responseData = await axios(
     "https://api.trendyol.com/sapigw/product-categories"
